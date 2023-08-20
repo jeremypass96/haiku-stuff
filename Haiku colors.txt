@@ -1,0 +1,2 @@
+Selected menu/list item background: Red: 35, Green: 105, Blue: 180
+Selected menu/list item text: all 255 (white).

@@ -1,0 +1,3 @@
+Plain font: Source Sans Pro | Size: 13
+Fixed font: JetBrains Mono | Size: 14
+Menu font: Source Sans Pro | Size: 13
