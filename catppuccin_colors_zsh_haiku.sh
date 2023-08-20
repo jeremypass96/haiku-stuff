@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # Setup Catppuccino colors (Haiku only).
-cd ~
-git clone https://github.com/catppuccin/zsh-syntax-highlighting.git
-cd zsh-syntax-highlighting/themes/
-cp -v *.zsh /system/settings/zsh/
+git clone https://github.com/catppuccin/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting && cd ~/zsh-syntax-highlighting/themes/ && cp -v *.zsh /system/settings/zsh/
 
 read -p "Which Catppuccino colors do you want for syntax highlighting?
 1.) Latte
@@ -22,10 +19,8 @@ elif [ "$resp" = 3 ]; then
 elif [ "$resp" = 4 ]; then
     echo "source /system/settings/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh" >> /boot/home/.zshrc
 else
-    echo "Invalid choice"
+    echo "Invalid choice."
 fi
 
-cd ~
-rm -rf zsh-syntax-highlighting
-
+rm -rf ~/zsh-syntax-highlighting
 echo "pfetch" >> /boot/home/.zshrc
