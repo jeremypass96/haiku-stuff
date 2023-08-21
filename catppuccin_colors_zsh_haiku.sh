@@ -22,5 +22,4 @@ else
     echo "Invalid choice."
 fi
 
-rm -rf ~/zsh-syntax-highlighting
-echo "pfetch" >> /boot/home/.zshrc
+rm -rf ~/zsh-syntax-highlighting && echo "pfetch" >> /boot/home/.zshrc
