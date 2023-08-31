@@ -104,5 +104,12 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+
+# Set the default umask
+umask 077
+
+# Disable highlighting of pasted text
+zle_highlight=('paste:none')
+
 alias ls="lsd"
 alias cat="bat"
