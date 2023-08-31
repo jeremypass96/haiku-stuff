@@ -21,4 +21,6 @@ set noshowmode
 EOF
 
 # Get vim-plug and install Catppuccin colors plugin.
-mkdir -p ~/config/settings/vim/autoload && curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -o ~/config/settings/vim/autoload/plug.vim && vim -es -u "$vimrc_path" -i NONE -c "PlugInstall" -c "qa"
+mkdir -p ~/config/settings/vim/autoload
+curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -o ~/config/settings/vim/autoload/plug.vim
+vim -es -u "$vimrc_path" -i NONE -c "PlugInstall" -c "qa"
