@@ -1,6 +1,8 @@
 #!/bin/bash
-# Change shell to zsh.
+# Change shell to zsh and install Zsh.
 sed -i s/'bash/zsh'/g /boot/system/settings/etc/passwd
+pkgman install zsh
+
 # Install Oh My Zsh.
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -14,7 +16,8 @@ cp -v ~/haiku-stuff/Dotfiles/.zshrc ~/.zshrc
 # Setup Catppuccino colors.
 ./configure_zsh_syntax_colors.sh
 
-# Add 'pfetch' to .zshrc
+# Add 'pfetch' to .zshrc. Also will install it if not installed.
 echo "pfetch" >> ~/.zshrc
+pkgman install pfetch
 
 echo "Zsh has been successfully configured."
