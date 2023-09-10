@@ -1,7 +1,7 @@
 #!/bin/bash
 # Change shell to zsh and install Zsh.
 sed -i s/'bash/zsh'/g /boot/system/settings/etc/passwd
-pkgman install zsh
+pkgman install -y zsh
 
 # Install Oh My Zsh.
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
