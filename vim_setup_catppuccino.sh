@@ -1,6 +1,9 @@
 #!/bin/bash
 # This script sets up Vim with the Catppuccino Mocha colorscheme and the Lightline plugin.
 
+# Install Vim.
+pkgman install -y vim
+
 # Configure the vimrc file.
 vimrc_path="$HOME/config/settings/vim/vimrc"
 cat << EOF >> "$vimrc_path"
