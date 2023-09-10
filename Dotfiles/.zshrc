@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-ZSH=/home/.oh-my-zsh/
+ZSH=$HOME/.oh-my-zsh/
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,7 +100,7 @@ plugins=(git colored-man-pages safe-paste copypath zsh-autosuggestions zsh-synta
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
-  mkdir $ZSH_CACHE_DIR
+  mkdir -p $ZSH_CACHE_DIR
 fi
 
 source $ZSH/oh-my-zsh.sh
