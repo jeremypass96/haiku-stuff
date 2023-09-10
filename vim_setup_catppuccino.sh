@@ -5,6 +5,7 @@
 pkgman install -y vim
 
 # Configure the vimrc file.
+touch $HOME/config/settings/vim/vimrc
 vimrc_path="$HOME/config/settings/vim/vimrc"
 cat << EOF >> "$vimrc_path"
 set number
