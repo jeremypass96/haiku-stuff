@@ -18,6 +18,6 @@ cp -v ~/haiku-stuff/Dotfiles/.zshrc ~/.zshrc
 
 # Add 'pfetch' to .zshrc. Also will install it if not installed.
 echo "pfetch" >> ~/.zshrc
-pkgman install pfetch
+pkgman install -y pfetch
 
 echo "Zsh has been successfully configured."
