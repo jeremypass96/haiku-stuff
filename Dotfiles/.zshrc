@@ -98,9 +98,9 @@ plugins=(git colored-man-pages safe-paste copypath zsh-autosuggestions zsh-synta
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+ZSH_CACHE_DIR=$HOME/config/cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
-  mkdir -p $ZSH_CACHE_DIR
+  mkdir $ZSH_CACHE_DIR
 fi
 
 source $ZSH/oh-my-zsh.sh
