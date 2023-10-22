@@ -119,5 +119,4 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_SAVE_NO_DUPS
 
-alias ls="lsd"
 alias cat="bat"
