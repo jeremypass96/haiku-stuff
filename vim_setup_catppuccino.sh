@@ -6,8 +6,8 @@ pkgman install -y vim
 
 # Configure the vimrc file.
 touch $HOME/config/settings/vim/vimrc
-vimrc_path="$HOME/config/settings/vim/vimrc"
-cat << EOF >> "$vimrc_path"
+vimrc_path=$HOME/config/settings/vim/vimrc
+cat << EOF >> $vimrc_path
 set number
 set cursorline
 set smoothscroll
@@ -27,4 +27,4 @@ EOF
 # Get vim-plug and install Catppuccin colors plugin.
 mkdir -p ~/config/settings/vim/autoload
 curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -o ~/config/settings/vim/autoload/plug.vim
-vim -es -u "$vimrc_path" -i NONE -c "PlugInstall" -c "qa"
+vim -es -u $vimrc_path -i NONE -c "PlugInstall" -c "qa"
