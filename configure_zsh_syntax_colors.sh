@@ -8,6 +8,8 @@ read -p "Which Catppuccino colors do you want for syntax highlighting?
 2.) Frappé
 3.) Macchiato
 4.) Mocha
+
+0.) None
 -> " resp
 
 if [ "$resp" = 1 ]; then
@@ -18,6 +20,9 @@ elif [ "$resp" = 3 ]; then
     echo "source /system/settings/zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh" >> /boot/home/.zshrc
 elif [ "$resp" = 4 ]; then
     echo "source /system/settings/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh" >> /boot/home/.zshrc
+elif [ "$resp" = 0 ]; then
+	rm -rf /system/settings/zsh/*.zsh
+	continue
 else
     echo "Invalid choice."
 fi
