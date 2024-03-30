@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script sets up Vim with the "sorbet" colorscheme and the Lightline plugin.
+# This script sets up Vim with the "OneHalfDark" colorscheme and the Lightline plugin.
 
 # Install Vim.
 pkgman install -y vim
@@ -15,10 +15,11 @@ set termguicolors
 
 call plug#begin('~/config/settings/vim/plugged')
 Plug 'itchyny/lightline.vim'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 call plug#end()
 
-let g:lightline = {'colorscheme': 'one'}
-colorscheme sorbet
+let g:lightline = {'colorscheme': 'onehalfdark'}
+colorscheme onehalfdark
 set laststatus=2
 set noshowmode
 EOF
