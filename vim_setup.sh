@@ -10,7 +10,7 @@ vimrc_path=$HOME/config/settings/vim/vimrc
 cat << EOF >> $vimrc_path
 set number
 set cursorline
-set linebreak                                                                                                                   
+set linebreak 
 set incsearch
 set hlsearch
 set spell
