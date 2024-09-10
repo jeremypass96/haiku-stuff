@@ -1,30 +1,65 @@
 #!/bin/bash
 
-# Setup Catppuccino colors (Haiku only).
-git clone https://github.com/catppuccin/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting && cp -v ~/zsh-syntax-highlighting/themes/*.zsh /system/settings/zsh/
+# Define color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[1;34m'
+MAGENTA='\033[1;35m'
+CYAN='\033[1;36m'
+NC='\033[0m' # No color
 
-read -p "Which Catppuccino colors do you want for syntax highlighting?
-1.) Latte
-2.) Frappé
-3.) Macchiato
-4.) Mocha
+echo -e "${CYAN}Setting up Catppuccino colors (Haiku only)...${NC}"
 
-0.) None
--> " resp
+# Clone and copy Catppuccino themes
+echo -e "${YELLOW}Cloning zsh-syntax-highlighting repository...${NC}"
+git clone https://github.com/catppuccin/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting
+echo -e "${GREEN}Repository cloned successfully.${NC}"
 
-if [ "$resp" = 1 ]; then
-    echo "source /system/settings/zsh/catppuccin_latte-zsh-syntax-highlighting.zsh" >> /boot/home/.zshrc
-elif [ "$resp" = 2 ]; then
-    echo "source /system/settings/zsh/catppuccin_frappe-zsh-syntax-highlighting.zsh" >> /boot/home/.zshrc
-elif [ "$resp" = 3 ]; then
-    echo "source /system/settings/zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh" >> /boot/home/.zshrc
-elif [ "$resp" = 4 ]; then
-    echo "source /system/settings/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh" >> /boot/home/.zshrc
-elif [ "$resp" = 0 ]; then
-	rm -rf /system/settings/zsh/*.zsh
-	continue
-else
-    echo "Invalid choice."
-fi
+echo -e "${YELLOW}Copying themes to /system/settings/zsh/...${NC}"
+cp -v ~/zsh-syntax-highlighting/themes/*.zsh /system/settings/zsh/
+echo -e "${GREEN}Themes copied successfully.${NC}"
 
+# Prompt user for color choice
+echo -e "${CYAN}Which Catppuccino colors do you want for syntax highlighting?${NC}"
+echo -e "${MAGENTA}1.) Latte${NC}"
+echo -e "${MAGENTA}2.) Frappé${NC}"
+echo -e "${MAGENTA}3.) Macchiato${NC}"
+echo -e "${MAGENTA}4.) Mocha${NC}"
+echo -e "${RED}0.) None${NC}"
+echo -n "${YELLOW}-> ${NC}"
+
+read -r resp
+
+# Handle user response
+case "$resp" in
+    1)
+        echo -e "${YELLOW}Adding Latte color scheme to .zshrc...${NC}"
+        echo "source /system/settings/zsh/catppuccin_latte-zsh-syntax-highlighting.zsh" >> /boot/home/.zshrc
+        ;;
+    2)
+        echo -e "${YELLOW}Adding Frappé color scheme to .zshrc...${NC}"
+        echo "source /system/settings/zsh/catppuccin_frappe-zsh-syntax-highlighting.zsh" >> /boot/home/.zshrc
+        ;;
+    3)
+        echo -e "${YELLOW}Adding Macchiato color scheme to .zshrc...${NC}"
+        echo "source /system/settings/zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh" >> /boot/home/.zshrc
+        ;;
+    4)
+        echo -e "${YELLOW}Adding Mocha color scheme to .zshrc...${NC}"
+        echo "source /system/settings/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh" >> /boot/home/.zshrc
+        ;;
+    0)
+        echo -e "${RED}Removing all zsh syntax highlighting files...${NC}"
+        rm -rf /system/settings/zsh/*.zsh
+        echo -e "${GREEN}Files removed.${NC}"
+        ;;
+    *)
+        echo -e "${RED}Invalid choice.${NC}"
+        ;;
+esac
+
+# Clean up
+echo -e "${YELLOW}Removing cloned repository...${NC}"
 rm -rf ~/zsh-syntax-highlighting
+echo -e "${GREEN}Repository removed.${NC}"
