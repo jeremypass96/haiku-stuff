@@ -39,6 +39,11 @@ echo -e "${YELLOW}Copying .zshrc configuration...${NC}"
 cp -v ~/haiku-stuff/Dotfiles/.zshrc ~/.zshrc
 echo -e "${GREEN}.zshrc configuration copied successfully.${NC}"
 
+# Copy custom Oh My Zsh theme
+echo -e "${YELLOW}Copying custom Oh My Zsh theme...${NC}"
+cp -v ~/haiku-stuff/jpassarelli.zsh-theme ~/.oh-my-zsh/custom/themes/jpassarelli.zsh-theme
+echo -e "${GREEN}Custom theme copied successfully.${NC}"
+
 # Setup Catppuccino colors
 echo -e "${YELLOW}Setting up Catppuccino colors...${NC}"
 ./configure_zsh_syntax_colors.sh
