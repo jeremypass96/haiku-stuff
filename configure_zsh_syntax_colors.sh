@@ -27,7 +27,7 @@ echo -e "${MAGENTA}2.) Frappé${NC}"
 echo -e "${MAGENTA}3.) Macchiato${NC}"
 echo -e "${MAGENTA}4.) Mocha${NC}"
 echo -e "${RED}0.) None${NC}"
-echo -n "${YELLOW}-> ${NC}"
+echo -e "${YELLOW}-> ${NC}"
 
 read -r resp
 
