@@ -18,6 +18,7 @@ echo -e "${GREEN}Vim installed successfully.${NC}"
 
 # Configure the vimrc file
 echo -e "${YELLOW}Configuring vimrc file...${NC}"
+mkdir -p $HOME/config/settings/vim/
 touch $HOME/config/settings/vim/vimrc
 vimrc_path=$HOME/config/settings/vim/vimrc
 cat << EOF >> $vimrc_path
