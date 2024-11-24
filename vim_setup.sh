@@ -9,7 +9,7 @@ MAGENTA='\033[1;35m'
 CYAN='\033[1;36m'
 NC='\033[0m' # No color
 
-echo -e "${CYAN}Setting up Vim with the 'OneHalfDark' colorscheme and Lightline plugin...${NC}"
+echo -e "${CYAN}Setting up Vim with the 'Ayu Mirage' colorscheme and Lightline plugin...${NC}"
 
 # Install Vim
 echo -e "${YELLOW}Installing Vim...${NC}"
@@ -33,11 +33,14 @@ set termguicolors
 
 call plug#begin('~/config/settings/vim/plugged')
 Plug 'itchyny/lightline.vim'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'ayu-theme/ayu-vim'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
-let g:lightline = {'colorscheme': 'onehalfdark'}
-colorscheme onehalfdark
+let g:lightline = {'colorscheme': 'ayu_mirage'}
+let g:one_allow_italics = 1
+let ayucolor="mirage"
+colorscheme ayu
 set laststatus=2
 set noshowmode
 EOF
@@ -50,4 +53,4 @@ curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -o ~/co
 vim -es -u $vimrc_path -i NONE -c "PlugInstall" -c "qa"
 echo -e "${GREEN}Lightline plugin installed successfully.${NC}"
 
-echo -e "${CYAN}Vim setup completed with the 'OneHalfDark' colorscheme and Lightline plugin.${NC}"
+echo -e "${CYAN}Vim setup completed with the 'Ayu Mirage' colorscheme and Lightline plugin.${NC}"
