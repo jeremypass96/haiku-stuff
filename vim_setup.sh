@@ -43,6 +43,7 @@ let ayucolor="mirage"
 colorscheme ayu
 set laststatus=2
 set noshowmode
+set backspace=indent,eol,start
 EOF
 echo -e "${GREEN}vimrc configured successfully.${NC}"
 
