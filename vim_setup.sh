@@ -18,10 +18,10 @@ echo -e "${GREEN}Vim installed successfully.${NC}"
 
 # Configure the vimrc file
 echo -e "${BLUE}Configuring vimrc file...${NC}"
-mkdir -p $HOME/config/settings/vim/
-touch $HOME/config/settings/vim/vimrc
+mkdir -p "$HOME"/config/settings/vim/
+touch "$HOME"/config/settings/vim/vimrc
 vimrc_path=$HOME/config/settings/vim/vimrc
-cat << EOF >> $vimrc_path
+cat << EOF >> "$vimrc_path"
 set number
 set cursorline
 set linebreak
@@ -51,7 +51,7 @@ echo -e "${GREEN}vimrc configured successfully.${NC}"
 echo -e "${BLUE}Setting up vim-plug and installing Lightline plugin...${NC}"
 mkdir -p ~/config/settings/vim/autoload
 curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -o ~/config/settings/vim/autoload/plug.vim
-vim -es -u $vimrc_path -i NONE -c "PlugInstall" -c "qa"
+vim -es -u "$vimrc_path" -i NONE -c "PlugInstall" -c "qa"
 echo -e "${GREEN}Lightline plugin installed successfully.${NC}"
 
 echo -e "${MAGENTA}Vim setup completed with the 'Ayu Mirage' colorscheme and Lightline plugin.${NC}"
