@@ -20,7 +20,7 @@ echo -e "${GREEN}Vim installed successfully.${NC}"
 echo -e "${BLUE}Configuring vimrc file...${NC}"
 mkdir -p "$HOME"/config/settings/vim/
 touch "$HOME"/config/settings/vim/vimrc
-vimrc_path=$HOME/config/settings/vim/vimrc
+vimrc_path="$HOME"/config/settings/vim/vimrc
 cat << EOF >> "$vimrc_path"
 set number
 set cursorline
