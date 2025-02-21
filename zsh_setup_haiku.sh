@@ -49,12 +49,16 @@ echo -e "${BLUE}Setting up Catppuccino colors...${NC}"
 ./configure_zsh_syntax_colors.sh
 echo -e "${GREEN}Catppuccino colors configured successfully.${NC}"
 
-# Add 'pfetch' to .zshrc and install it if not installed
-echo -e "${BLUE}Adding 'pfetch' to .zshrc...${NC}"
-echo "pfetch" >> ~/.zshrc
+# Add 'fastfetch' to .zshrc and install it if not installed
+echo -e "${BLUE}Adding 'fastfetch' to .zshrc...${NC}"
+echo "fastfetch" >> ~/.zshrc
 
-echo -e "${BLUE}Installing pfetch...${NC}"
-pkgman install -y pfetch
-echo -e "${GREEN}Pfetch installed successfully.${NC}"
+echo -e "${BLUE}Installing Fastfetch...${NC}"
+pkgman install -y fastfetch
+echo -e "${GREEN}Fastfetch installed successfully.${NC}"
+
+echo -e "${BLUE}Copying Fastfetch config file..."
+mkdir ~/config/settings/fastfetch
+cp -v ~/haiku-stuff/Dotfiles/config/fastfetch/config.jsonc ~/config/settings/fastfetch/config.jsonc
 
 echo -e "${MAGENTA}Zsh has been successfully configured.${NC}"
