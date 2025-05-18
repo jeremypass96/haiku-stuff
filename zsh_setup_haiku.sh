@@ -59,6 +59,10 @@ echo -e "${GREEN}Fastfetch installed successfully.${NC}"
 
 echo -e "${BLUE}Copying Fastfetch config file..."
 mkdir ~/config/settings/fastfetch
-cp -v ~/haiku-stuff/Dotfiles/config/fastfetch/config.jsonc ~/config/settings/fastfetch/config.jsonc
+cp -v ~/haiku-stuff/Dotfiles/config/settings/fastfetch/config.jsonc ~/config/settings/fastfetch/config.jsonc
+
+echo -e "${BLUE}Copying terminal theme config file..."
+mkdir -p ~/config/settings/Terminal/Themes
+cp -v ~/haiku-stuff/Dotfiles/config/settings/Terminal/Themes/AyuMirage ~/config/settings/Terminal/Themes/AyuMirage
 
 echo -e "${MAGENTA}Zsh has been successfully configured.${NC}"
