@@ -8,7 +8,7 @@ A personal set of scripts and dotfiles that turn Haiku's terminal experience int
 
 | File:                           | Description: |
 |---------------------------------|-------------|
-| `zsh_setup_haiku.sh`            | Fully configures Zsh (Oh My Zsh, plugins, custom theme, Fastfetch setup). |
+| `zsh_setup_haiku.sh`            | Fully configures Zsh (Oh My Zsh, plugins, custom theme, Fastfetch config). |
 | `configure_zsh_syntax_colors.sh`| Prompts you to choose and apply a Catppuccin Zsh syntax theme. |
 | `vim_setup.sh`                  | Installs Vim with Ayu Mirage colorscheme and Lightline plugin. |
 | `vim_setup_catppuccino.sh`      | Same as above, but with the Catppuccin Mocha theme. |
